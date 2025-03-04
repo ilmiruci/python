@@ -1,3 +1,5 @@
+from typing import Any
+
 # --------------Списки
 
 nums: list[int] = [10, 20, 30, 40]
@@ -49,3 +51,15 @@ print(fruits.get("банан", "Такой ключ нет"))
 print(fruits["банан"])
 
 print(fruits)
+
+# Аннотация типов в словарях
+ex_1: dict = {"alice": 18, "bob": 20}
+ex_2: dict[str, int] = {"alice": 18, "bob": 20}
+
+
+fruits: dict[Any, Any] = {
+    "яблоко": 5,
+    False: "Описание 2",
+    5: "пять",
+    (10, 20, 30): "тут числа в кортеже",
+}
